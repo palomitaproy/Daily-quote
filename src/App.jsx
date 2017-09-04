@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer.jsx';
 import Nav from './Nav.jsx';
+import Gluckskeks from './Gluckskeks.jsx';
 
 class App extends React.Component {
  
@@ -8,8 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Nav/>
-
-
+        <Gluckskeks/>
         <Footer/>
       </div>
       );

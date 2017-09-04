@@ -21,7 +21,6 @@ class Nav extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-              
               </li>
             </ul>
         </div>
