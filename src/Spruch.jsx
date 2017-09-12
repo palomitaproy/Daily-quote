@@ -1,65 +1,56 @@
-import React from 'react';
-//import axios from 'axios';
+import React from "react";
+import $ from "jquery";
 
-class  Spruch extends React.Component {
+class Spruch extends React.Component {
   constructor(props) {
     super(props);
- 
+
     this.state = {
       existenQuote: []
     };
   }
 
   componentDidMount() {
-  let data = require('./proverbs.json')
-  let r_quote = Math.floor(Math.random() * (data.length )) + 1;
+    let data = require("./proverbs.json");
+    let r_quote = Math.floor(Math.random() * data.length) + 1;
 
-  let quote = data[r_quote].quote;
-  let author = data[r_quote].author;
- 
-  let date = new Date();
-  let day = date.getDate();
+    let quote = data[r_quote].quote;
+    let author = data[r_quote].author;
 
+    let date = new Date();
+    let day = date.getDate();
 
-  var object= {'quote':quote,'author':author,'day':day}
-  var existenQuote=JSON.parse(localStorage.getItem('quote'))
+    var object = { quote: quote, author: author, day: day };
+    var existenQuote = JSON.parse(localStorage.getItem("quote"));
 
-  if(existenQuote == null || day !== existenQuote["day"]){
+    if (existenQuote == null || day !== existenQuote["day"]) {
+      localStorage.setItem("quote", JSON.stringify(object));
+      var existenQuote = object;
+    }
 
-  localStorage.setItem('quote',JSON.stringify(object));
-   var existenQuote= object;
+    console.log(existenQuote);
+
+    this.setState({ existenQuote });
+
+    $("#intro_text").hide();
+   $("blockquote").addClass("quote_animation")
 
   }
- 
-
-
-console.log(existenQuote);
-
-  this.setState({existenQuote});
-
-
-}
 
   render() {
-
-    let existenQuote=this.state.existenQuote;
+    let existenQuote = this.state.existenQuote;
     return (
-      <div>
-        <h2>{existenQuote["quote"]}</h2>
-         <h2>{existenQuote["author"]}</h2>
-      </div>
+      
+      <blockquote className="blockquote">
+      <p className="quotation-mark opening">&ldquo;</p>
+        <h2 className="quote">{existenQuote["quote"]}</h2>
+        <p className="quotation-mark closing"> &rdquo;</p>
+        <hr  />
+        <p>{existenQuote["author"]}</p>
+      </blockquote>
+      
     );
   }
 }
 
 export default Spruch;
-
- /* axios.get(`https://taeglicheszit.at/zitat-api.php?format=json`)
-     .then(response => {
-      
-        const posts = response.data.zitat;
-        this.setState({ posts });
-      })
-  .catch(function (error) {
-    console.log(error);
-  });*/

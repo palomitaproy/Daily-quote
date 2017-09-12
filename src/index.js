@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(
-  <App url="/api/todos"/>, document.getElementById('app'));
+ReactDOM.render(<App url="/api/todos" />, document.getElementById("app"));
 
 registerServiceWorker();

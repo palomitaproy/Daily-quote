@@ -1,10 +1,46 @@
-/*body,html{
-	background:blue;
-}*/
-img{
-	width: 600px;
+#intro_text {
+	cursor: pointer;
+	font-style: italic;
 }
-.keks{
 
-	margin-top: 100px;
+html,
+body {
+	height: 100%;
+}
+
+.blockquote {
+	border-left: none;
+	opacity: 0;
+	transition: opacity 2s 2s;
+}
+.quote_animation{
+	opacity: 1;
+}
+
+.quotation-mark {
+	position: absolute;
+	font-weight: bold;
+	font-size: 10em;
+	color: #d4d4d4;
+	font-family: "Times New Roman", Georgia, Serif;
+	z-index: 0;
+}
+
+.quotation-mark.opening {
+	left: 0px;
+	margin-top: -70px;
+}
+
+.quotation-mark.closing {
+	right: 0px;
+	margin-top: -75px;
+}
+.quote {
+	position: relative;
+	z-index: 10;
+}
+.blockquote hr {
+	height: 0.5px;
+	width: 30%;
+	background-color: #d4d4d4;
 }
