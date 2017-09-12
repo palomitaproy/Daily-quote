@@ -4,5 +4,6 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <App/>, document.getElementById('app'));
+  <App url="/api/todos"/>, document.getElementById('app'));
+
 registerServiceWorker();
