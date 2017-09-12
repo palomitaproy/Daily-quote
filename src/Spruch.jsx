@@ -1,5 +1,6 @@
 import React from "react";
 import $ from "jquery";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Spruch extends React.Component {
   constructor(props) {
@@ -33,22 +34,26 @@ class Spruch extends React.Component {
     this.setState({ existenQuote });
 
     $("#intro_text").hide();
-   $("blockquote").addClass("quote_animation")
-
+    
   }
 
   render() {
     let existenQuote = this.state.existenQuote;
     return (
-      
-      <blockquote className="blockquote">
-      <p className="quotation-mark opening">&ldquo;</p>
-        <h2 className="quote">{existenQuote["quote"]}</h2>
-        <p className="quotation-mark closing"> &rdquo;</p>
-        <hr  />
-        <p>{existenQuote["author"]}</p>
-      </blockquote>
-      
+    <ReactCSSTransitionGroup
+      transitionName="blockquote"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={false}
+      transitionLeave={true}>
+        <blockquote className="blockquote">
+          <p className="quotation-mark opening">&ldquo;</p>
+          <h2 className="quote">{existenQuote["quote"]}</h2>
+          <p className="quotation-mark closing"> &rdquo;</p>
+          <hr />
+          <p>{existenQuote["author"]}</p>
+        </blockquote>
+      </ReactCSSTransitionGroup>
     );
   }
 }

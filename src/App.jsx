@@ -1,6 +1,7 @@
 import React from "react";
 import Spruch from "./Spruch.jsx";
 import $ from "jquery";
+
 import { Container, Row, Col } from "reactstrap";
 var ReactDOM = require("react-dom");
 
@@ -12,7 +13,7 @@ class App extends React.Component {
   }
 
   handleClick() {
- 
+
     ReactDOM.render(<Spruch />, document.getElementById("inhalt"));
   }
 
