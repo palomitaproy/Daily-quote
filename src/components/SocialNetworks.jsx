@@ -16,17 +16,17 @@ class SocialNetworks extends React.Component {
     return (
       <div className="mx-auto social row">
         <div className="col-sm">
-          <FacebookShareButton url="http://localhost:3000" children="FacebookIcon">
+          <FacebookShareButton url="https://yourfortunecookie.herokuapp.com" children="FacebookIcon">
             <FacebookIcon  className="mx-auto" size={32} round={true} />
           </FacebookShareButton>
         </div>
         <div className="col-sm">
-          <TwitterShareButton url="http://localhost:3000" children="TwitterIcon"> 
+          <TwitterShareButton url="https://yourfortunecookie.herokuapp.com" children="TwitterIcon"> 
             <TwitterIcon className="mx-auto" size={32} round={true} />
           </TwitterShareButton>
         </div> 
         <div className="col-sm">
-          <WhatsappShareButton url="http://localhost:3000" children="WhatsappIcon">
+          <WhatsappShareButton url="https://yourfortunecookie.herokuapp.com" children="WhatsappIcon">
             <WhatsappIcon className="mx-auto" size={32} round={true} />
           </WhatsappShareButton>
         </div>
