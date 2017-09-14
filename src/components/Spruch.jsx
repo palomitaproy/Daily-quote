@@ -1,6 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import SocialNetworks from "./SocialNetworks.jsx";
 
 class Spruch extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Spruch extends React.Component {
   }
 
   componentDidMount() {
-    let data = require("./proverbs.json");
+    let data = require("../proverbs.json");
     let r_quote = Math.floor(Math.random() * data.length) + 1;
 
     let quote = data[r_quote].quote;
@@ -53,7 +54,9 @@ class Spruch extends React.Component {
           <hr />
           <p>{existenQuote["author"]}</p>
         </blockquote>
+        <SocialNetworks />
       </ReactCSSTransitionGroup>
+
     );
   }
 }

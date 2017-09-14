@@ -24,7 +24,7 @@ body {
 .quotation-mark {
 	position: absolute;
 	font-weight: bold;
-	font-size: 10em;
+	font-size: 15em;
 	color: #d4d4d4;
 	font-family: "Times New Roman", Georgia, Serif;
 	z-index: 0;
@@ -32,12 +32,12 @@ body {
 
 .quotation-mark.opening {
 	left: 0px;
-	margin-top: -70px;
+	margin-top: -110px;
 }
 
 .quotation-mark.closing {
 	right: 0px;
-	margin-top: -75px;
+	margin-top: -140px;
 }
 .quote {
 	position: relative;
@@ -47,4 +47,15 @@ body {
 	height: 0.5px;
 	width: 30%;
 	background-color: #d4d4d4;
+}
+.social{
+	
+    width: 40%;
+
+}
+
+.social_networks{
+	display: inline-block;
+	padding: 5px;
+
 }

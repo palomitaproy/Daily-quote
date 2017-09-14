@@ -7,6 +7,7 @@ class Footer extends React.Component{
         <footer id="footer-app" className="py-3 bg-light" >
           <div className="container text-center">
             <a href="#copyright">Copyright</a>
+            
           </div>
         </footer>
       </div>
