@@ -10,7 +10,7 @@ const {
 const FacebookIcon = generateShareIcon("facebook");
 const TwitterIcon = generateShareIcon("twitter");
 const WhatsappIcon = generateShareIcon("whatsapp");
-const titel = "Your Fortune cookie:";
+const sharingTitel = "Your Fortune cookie hier:";
 const url = "https://yourfortunecookie.herokuapp.com";
 
 class SocialNetworks extends React.Component {
@@ -18,17 +18,17 @@ class SocialNetworks extends React.Component {
     return (
       <div className="mx-auto social row">
         <div className="col-sm">
-          <FacebookShareButton titel={titel} url={url} children="FacebookIcon">
+          <FacebookShareButton title={sharingTitel} url={url} children="FacebookIcon">
             <FacebookIcon  className="mx-auto" size={32} round={true} />
           </FacebookShareButton>
         </div>
         <div className="col-sm">
-          <TwitterShareButton titel={titel} url={url} children="TwitterIcon"> 
+          <TwitterShareButton title={sharingTitel} url={url} children="TwitterIcon"> 
             <TwitterIcon className="mx-auto" size={32} round={true} />
           </TwitterShareButton>
         </div> 
         <div className="col-sm">
-          <WhatsappShareButton titel={titel} url={url} children="WhatsappIcon">
+          <WhatsappShareButton title={sharingTitel} url={url} children="WhatsappIcon">
             <WhatsappIcon className="mx-auto" size={32} round={true} />
           </WhatsappShareButton>
         </div>
