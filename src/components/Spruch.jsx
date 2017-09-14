@@ -48,9 +48,9 @@ class Spruch extends React.Component {
       transitionEnter={false}
       transitionLeave={true}>
         <blockquote className="blockquote">
-          <p unselectable="on" className="quotation-mark opening">&ldquo;</p>
-          <h2 unselectable="on" className="quote">{existenQuote["quote"]}</h2>
-          <p unselectable="on" className="quotation-mark closing"> &rdquo;</p>
+          <p className="quotation-mark opening">&ldquo;</p>
+          <h2 className="quote">{existenQuote["quote"]}</h2>
+          <p  className="quotation-mark closing"> &rdquo;</p>
           <hr />
           <p>{existenQuote["author"]}</p>
         </blockquote>
