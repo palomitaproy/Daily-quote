@@ -1,0 +1,68 @@
+#intro_text {
+	cursor: pointer;
+	font-style: italic;
+	user-select: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.blockquote {
+	border-left: none;
+}
+
+.blockquote-appear {
+  opacity: 0;
+}
+
+.blockquote-appear.blockquote-appear-active {
+  opacity: 1;
+  transition: opacity .9s ease-in;
+}
+
+.quotation-mark {
+	position: absolute;
+	font-weight: bold;
+	font-size: 15em;
+	user-select: none;
+	color: #d4d4d4;
+	font-family: "Times New Roman", Georgia, Serif;
+	z-index: 0;
+}
+
+.quotation-mark.opening {
+	left: 0px;
+	margin-top: -110px;
+}
+
+.quotation-mark.closing {
+	right: 0px;
+	margin-top: -140px;
+}
+.quote {
+	position: relative;
+	z-index: 10;
+	user-select: none;
+}
+.blockquote hr {
+	height: 0.5px;
+	width: 30%;
+	background-color: #d4d4d4;
+
+}
+.blockquote p{
+	user-select: none;
+}
+.social{
+	
+    width: 40%;
+
+}
+
+.social_networks{
+	display: inline-block;
+	padding: 5px;
+
+}

@@ -1,7 +1,9 @@
 import React from "react";
 import $ from "jquery";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import SocialNetworks from "./SocialNetworks.jsx";
+import Footer from "./Footer.jsx";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
 
 class Spruch extends React.Component {
   constructor(props) {
@@ -30,33 +32,39 @@ class Spruch extends React.Component {
       var existenQuote = object;
     }
 
-   // console.log(existenQuote);
-
     this.setState({ existenQuote });
 
     $("#intro_text").hide();
-    
   }
 
   render() {
     let existenQuote = this.state.existenQuote;
     return (
-    <ReactCSSTransitionGroup
-      transitionName="blockquote"
-      transitionAppear={true}
-      transitionAppearTimeout={500}
-      transitionEnter={false}
-      transitionLeave={true}>
-        <blockquote className="blockquote">
-          <p className="quotation-mark opening">&ldquo;</p>
-          <h2 className="quote">{existenQuote["quote"]}</h2>
-          <p  className="quotation-mark closing"> &rdquo;</p>
-          <hr />
-          <p>{existenQuote["author"]}</p>
-        </blockquote>
-        <SocialNetworks />
-      </ReactCSSTransitionGroup>
+      <ReactCSSTransitionGroup
+        transitionName="blockquote"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={true}
+      >
+        <Switch>
+          <Route exact path="/qoute"
+            render={props => (
+              <blockquote className="blockquote">
+                <p className="quotation-mark opening">&ldquo;</p>
+                <h2 className="quote">{existenQuote["quote"]}</h2>
+                <p className="quotation-mark closing"> &rdquo;</p>
+                <hr />
+                <p>{existenQuote["author"]}</p>
+              </blockquote>
+            )}
+          />
 
+         
+          </Switch>
+        <Footer />
+
+      </ReactCSSTransitionGroup>
     );
   }
 }

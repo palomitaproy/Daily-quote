@@ -1,37 +1,31 @@
 import React from "react";
 import Spruch from "./Spruch.jsx";
-
-//import $ from "jquery";
-
 import { Container, Row, Col } from "reactstrap";
-
-var ReactDOM = require("react-dom");
-
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import About from "./About.jsx";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-
-    ReactDOM.render(<Spruch />, document.getElementById("inhalt"));
   }
 
   render() {
     return (
       <Container className="text-center">
-        <Row>
-          <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
-            <h1 onClick={this.handleClick} id="intro_text" >
-              click me to reveal your future
-            </h1>
-            <h2 id="inhalt" />
-          </Col>
-        </Row>
+        <Router>
+          <Row>
+            <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
+           <Route exact path="/" render={props => <Link to="/qoute">
+                <h1 id="intro_text">click me to reveal your future</h1>
+              </Link> } />
+              
+      
+                <Route exact path="/qoute" render={props => <Spruch />} />
+                <Route exact path="/about" render={props => <About />} />
 
+            </Col>
+          </Row>
+        </Router>
       </Container>
     );
   }
