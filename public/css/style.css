@@ -34,12 +34,12 @@ body {
 
 .quotation-mark.opening {
 	left: 0px;
-	margin-top: -110px;
+	margin-top: -180px;
 }
 
 .quotation-mark.closing {
 	right: 0px;
-	margin-top: -140px;
+	margin-top: -160px;
 }
 .quote {
 	position: relative;
