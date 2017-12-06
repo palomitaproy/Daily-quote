@@ -16,10 +16,10 @@ class App extends React.Component {
           <Row>
             <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
            <Route exact path="/" render={props => <Link to="/qoute">
-                <h1 id="intro_text">click me to reveal your future</h1>
+                <h1 id="intro_text">Your daily quote</h1>
               </Link> } />
-              
-      
+
+
                 <Route exact path="/qoute" render={props => <Spruch />} />
                 <Route exact path="/about" render={props => <About />} />
 

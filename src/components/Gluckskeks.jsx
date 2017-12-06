@@ -18,10 +18,10 @@ constructor(props) {
   render() {
 
     return (
-     <div  className="text-center keks" > 
-        <h1>Dein Glückskeksspruch</h1>
+     <div  className="text-center keks" >
+        <h1>Your daily Quote</h1>
        <img onClick={this.handleClick} src="imgs/keks.png"  className="img-fluid" alt="Glückskeks"/>
-        
+
      </div>
     );
   }
